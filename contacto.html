@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Blinker' rel='stylesheet'>
 </head>
 <body>
-    <header><h4>Si quieres saber más sobre mí, no dudes en rellenar este formulario para contactar conmigo
+    <nav>
+        <section class="menu">
+        <h3 id="myNombre">BEATRIZ CONCHADO </h3>
+        <a href = "index.html">HOME</a>
+        <a href = "biografia.html">BIOGRAFÍA</a>
+        <a href = "portfolio.html">PORTFOLIO</a>
+        <a href = "contacto.html">CONTACTO</a>
+        </section>
+    </nav>
+    <div class="introform"><h4>Si quieres saber más sobre mí, no dudes en rellenar este formulario para contactar conmigo
         ¡También puedes seguirme en GitHub o Linkedin! O escribirme un correo electrónico directamente a mi <a href="mailto:
-        beatriz.conchado.peiro@gmail.com">email</a>.</header></h4>
-        No te olvides de echar un vistazo a mis proyectos en la sección <a href="portfolio.html">Portfolio</a>.
-    </header>
-    <section>
-        <form>
+        beatriz.conchado.peiro@gmail.com">email</a>.
+        No te olvides de echar un vistazo a mis proyectos en la sección <a href="portfolio.html">PORTFOLIO</a>.</h4>
+    </div>
+    <section class="form">
             <label for="name">Nombre: </label><br>
-            <input type="text" id="name" name="name"><br>
+            <input type="text" id="name" name="name" placeholder="María Luisa"><br>
 
             <label for="surname">Apellidos</label><br>
-            <input type="text id="surname" name="surname"><br>
+            <input type="text id="surname" name="surname" placeholder="Rodríguez García"><br>
 
             <label for="reason">Motivo de la consulta</label><br>
-            <input type="text" id="reason" name="reason"><br>
+            <input type="text" id="reason" name="reason" placeholder="Necesito más información"><br>
 
             <label for="message">Mensaje</label><br>
-            <textarea id="message"  name="message"><br>
+            <textarea id="message"  name="message" placeholder="Me pongo en contacto contigo porque ..."></textarea><br>
 
-            <input type="submit" value="Submit">
+             <input type="button" value="Enviar">
 
-
-        </form>
     </section>
 </body>
+<footer>
+    <!-- <a href ="https://www.linkedin.com/in/beatriz-conchado-peiro-a0276880/" id="linkedin-img"><img src="linkedin2.png"> </a> -->
+</footer>
 
 </html>

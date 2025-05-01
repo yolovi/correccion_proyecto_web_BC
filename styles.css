@@ -1,0 +1,97 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Blinker';
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End of MeyerWeb tools*/
+
+/*Top menu*/
+.menu {display:flex;
+    flex-direction: row; color: black;justify-content: space-between; background-color:#8c88bd; align-items:end;line-height:  60px;padding:30px,border-radius: ;font-size:18px;}
+nav {position:sticky}
+#myNombre {font-weight: 600;font-size: 18px;}
+/*End of Top menu*/
+
+/*Index styles*/
+#myName {color: black; font-weight: 800; font-size: 28px;text-align: center;line-height:  60px;}
+#hello   {color: black; font-weight: 800; font-size: 50px;text-align: center;line-height:  50px;}
+#introduction {margin: 80px; text-align:center;font-size: 16px;;}
+#img-earth {width: 200px; height: 200px;margin: auto; display: block;}
+
+/*Biografia-article y aside*/
+#titulos-biografia {color:#463cba; font-weight: 600;font-size: 18px ;}
+article {margin: 60px;display:flex; flex-direction: column; ;background-color: #cfccf0; width:600px;padding: 20px;text-align:left;}
+aside {margin: -580px 600px -800px 950px;display:flex; width: 194px;;flex-direction:  column; background-color: rgb(236, 181, 181);padding:20px;text-align:center;}
+#cv-img {
+    width:170px; height: 170px; border-radius:50%; border:solid 12px #817cb4; 
+}
+
+/*Proyectos portfolio*/
+#portfolio-section {margin: 40px 0px 50px ;color:#463cba;}{a:hover }
+.proyecto1 {margin: 20px 0px 0px 0px;text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:50px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
+.proyecto2 {text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:45px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
+.proyecto3 {text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:45px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
+.proyecto4 {text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:40px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
+
+
+/*Form*/
+.form {margin: 70px 200px 200px 380px;display: flex; flex-direction:column;border: 5px;width:500px;text-align: left;}
+.introform {margin:50px 280px 40px 190px; text-align: center; border: 10px;}
+
+/*General styles*/
+h1 {color:darkgrey; }
+h4 {color:black}
+
+/*Pictures*/
+
+
+/*.linkedin-img { background:url(linkedin2.png)
+   width:100px; height:100px;
+}*/
+
+@media screen {max: 600px;
+}
