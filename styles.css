@@ -17,6 +17,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
+	box-sizing; border-box;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -49,38 +50,90 @@ table {
 }
 /*End of MeyerWeb tools*/
 
-/*Top menu*/
+/*Top menu Navigación*/
 .menu {display:flex;
-    flex-direction: row; color: black;justify-content: space-between; background-color:#8c88bd; align-items:end;line-height:  60px;padding:30px,border-radius: ;font-size:18px;}
-nav {position:sticky}
+    flex-direction: row; color: black;justify-content: space-between; background-color:#8c88bd; align-items:end;line-height:  60px;padding:30px, ;font-size:18px;}
+nav {position:sticky;grid-area: header;}
+.menu:hover {background-color:rgb(236, 181, 181);}
 #myNombre {font-weight: 600;font-size: 18px;}
-/*End of Top menu*/
 
-/*Index styles*/
+/*End of Top menu Navigación*/
+
+/*Tab Home styles*/
 #myName {color: black; font-weight: 800; font-size: 28px;text-align: center;line-height:  60px;}
 #hello   {color: black; font-weight: 800; font-size: 50px;text-align: center;line-height:  50px;}
-#introduction {margin: 80px; text-align:center;font-size: 16px;;}
-#img-earth {width: 200px; height: 200px;margin: auto; display: block;}
+#introduction {margin: 80px; text-align:center;font-size: 16px;}
+#introduction::first-letter {font-size:36px;}
+#introduction::first-line {line-height: 22px;}
+#img-earth {width: 200px; height: 200px;margin:auto; display: block;}
 
-/*Biografia-article y aside*/
+
+	/*Web responsive Home*/
+
+	@media only screen and (max-width: 600px) { /*teléfonos móviles*/
+		nav {grid-area: 1 / span 2;margin:1px;font-size: 12px;}
+		section {grid-area: 2 / span 2; margin:5px;}
+	}	
+  
+	@media only screen and (max-width: 768px) {  /*tablets*/
+		nav {grid-area: 1 / span 2;margin:10px;font-size: 12px;}
+		section {grid-area: 2 / span 2; margin:5px;}
+	}	
+
+
+/*Tab Biografia -article y aside*/
 #titulos-biografia {color:#463cba; font-weight: 600;font-size: 18px ;}
 article {margin: 60px;display:flex; flex-direction: column; ;background-color: #cfccf0; width:600px;padding: 20px;text-align:left;}
 aside {margin: -580px 600px -800px 950px;display:flex; width: 194px;;flex-direction:  column; background-color: rgb(236, 181, 181);padding:20px;text-align:center;}
+.perfil:hover {background-color:rgb(236, 181, 181);}
+.educacion:hover {background-color:rgb(236, 181, 181);}
+.habilidades:hover {background-color:rgb(236, 181, 181);}
+.idiomas:hover {background-color:rgb(255, 196, 196);}
+.software:hover {background-color:rgb(255, 196, 196);}
 #cv-img {
     width:170px; height: 170px; border-radius:50%; border:solid 12px #817cb4; 
 }
+	/*Web responsive Biografía*/
 
-/*Proyectos portfolio*/
-#portfolio-section {margin: 40px 0px 50px ;color:#463cba;}{a:hover }
+	@media only screen and (max-width: 600px) { /*teléfonos móviles*/
+		nav {grid-area: 1 / span 2;margin:1px;font-size: 12px;}
+		.container {
+			flex-direction:column; width:100%;
+		}
+	}
+  
+	@media only screen and (max-width: 768px) {  /*tablets*/ /*NO FUNCIONA - DUDA 1: creo que porque he puesto tamaños en px arriba?*/
+		nav {grid-area: 1 / span 2;margin:10px;font-size: 12px;}
+		.container {
+			flex-direction:column; width:100%;
+		}
+	}
+
+/*Tab Proyectos portfolio*/
+#portfolio-section {margin: 40px 0px 50px ;color:#463cba;}
 .proyecto1 {margin: 20px 0px 0px 0px;text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:50px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
 .proyecto2 {text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:45px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
 .proyecto3 {text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:45px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
 .proyecto4 {text-align: center;display: flex; flex-direction: column;font-weight: 600; font-size: 18px;line-height:40px;background-color: rgb(255, 255, 238);border:4px dashed rgb(236, 181, 181)}
 
 
-/*Form*/
-.form {margin: 70px 200px 200px 380px;display: flex; flex-direction:column;border: 5px;width:500px;text-align: left;}
-.introform {margin:50px 280px 40px 190px; text-align: center; border: 10px;}
+/*Tab Contacto*/
+.form {margin:auto;display: flex; flex-direction:column;border: 5px;width:500px;text-align: left;}
+.introform {margin:auto; padding: 40px;text-align: center; border: 10px;}
+
+	/*Web responsive Contacto*/
+
+		@media only screen and (max-width: 600px) { /*teléfonos móviles*/
+			nav {grid-area: 1 / span 2;margin:1px;font-size: 12px;}
+			.introform {margin-left:5px; margin-right: 5px ;}
+			.form {margin-left:10px; margin-right: 10px ;}
+		}	
+  
+		@media only screen and (max-width: 768px) {  /*tablets*/
+			nav {grid-area: 1 / span 2;margin:10px;font-size: 12px;}
+			.introform {margin-left:5px; margin-right: 5px ;}
+			.form {grid-area: 2 / span 2; margin-left:5px; margin-right: 5px;}
+		}	
 
 /*General styles*/
 h1 {color:darkgrey; }
@@ -88,10 +141,12 @@ h4 {color:black}
 
 /*Pictures*/
 
-
-/*.linkedin-img { background:url(linkedin2.png)
+/* DUDA 2: Imagen con link incluido, no me deja escalar*/
+/*.linkedin-img 
    width:100px; height:100px;
 }*/
 
-@media screen {max: 600px;
+@media (max-width:600px) {body {
+	background-color:#8c88bd;}
 }
+
