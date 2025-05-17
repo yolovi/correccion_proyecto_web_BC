@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <!-- CORRECCION:
+        estos dos links de abajo cambialos de orden, si tienes alguna referencia a la tipografía en el css puede que no la detecte porque aun no está cargada.
+    -->
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Blinker' rel='stylesheet'>
 </head>
 <body>
+    <!-- CORRECCION:
+        section sobra aquí, solo tienes un grupo de enlaces que no aporta nada semánticamente, si quieres agruparlo con el h3 usa div y sino h3 y seguido el nav, pero nav contenido en div y no al revés y h3 fuera de nav, a la par.
+        Los márgenes no están bien aplicados y al pasarlo a movil se amontonan las opciones del nav llegando a superponerse.
+    -->
     <nav>
         <section class="menu">
         <h3 id="myNombre">BEATRIZ CONCHADO </h3>
@@ -17,6 +24,11 @@
         <a href = "contacto.html">CONTACTO</a>
         </section>
     </nav>
+    <!-- CORRECCION:
+        + solo un h1 por documento (normalmente el titulo), hello world usa h2.
+        + h4 mal usado. los h son para dar titulos, subtitulos o antetitulos de distintas partes de la pagina. Aquí tienes dos partes bien definidas y relacionadas con la página, lo adeacuado sería usar un main que contenga dos article:
+        main > h1 + h2 + img + article * 2 (uno para #bio y portfolio) y otro para contacto. 
+    -->
     <section><h1 id="myName">Beatriz Conchado</h1><br>
              <h1 id="hello"> Hello World!</h1><br>
              <img src="earth.png" id="img-earth">
@@ -26,7 +38,10 @@
         Si quieres ponerte en contacto conmigo, puedes hacerlo a través de mi perfil de Linkedin o rellenando el 
         formulario disponible en la sección <a href="contacto.html">CONTACTO</a> ¡Nos vemos pronto! </h4></section>
 </body>
+<!-- CORRECCION:
+    El footer debe ir dentro del body
+    -->
 <footer>
-   <!-- <a href ="https://www.linkedin.com/in/beatriz-conchado-peiro-a0276880/" id="linkedin-img"><img src="linkedin2.png"> </a>-->
+   <!-- <a href ="https://www.linkedin.com/in/beatriz-conchado-peiro-a0276880/" id="linkedin-img"><img src="linkedin2.png"> </a> -->
 </footer>
 </html>

@@ -19,7 +19,11 @@
     </section>
     <section class="container">
     <article>
-        
+        <!-- CORRECCION:
+        la etiqueta details tiene una s al final, y debería dejar el titulo fuera de ella. 
+        h1 sería para un titulo de esta página, como BIOGRAFIA por ejemplo, o tu nombre en el nav, aquí es más apropiado h2, además se recomienda solo un h1 por pagina.
+        Igual que en index, section está mal aplicada, deberias tener un main, un div agrupando perfil, educacion y habilidades y estos a su vez serian articles. Luego tu foto, idiomas, y software serian otro div y cada uno de esos (tu foto no) articles.
+        -->
         <detail class ="perfil">
         <h1 id="titulos-biografia">PERFIL</h1>
         <h4>Soy una project manager que tiene las certificaciones de ITIL 4, Scrum Master y PRINCE 2 y posee 
@@ -44,7 +48,9 @@
             <li>Resolución creativa de problemas </li></ul><br></h4><br>
         </detail>
         </article>
-       
+       <!-- CORRECCION:
+        aside se utiliza para contenido secundario no relacionado. Esto forma parte del contenido principal que quieres transmitir, y está relacionado con el contenido de la sección (y la página), por tanto article. Cierras ul antes que h4, acostumbrate a cerrar etiquetas en orden inverso al que las abres, una etiqueta contiene a otra, tanto en apertura como en cierre.
+       -->
         <aside>
             <detail class ="idiomas">
             <img src="foto_Beatriz Conchado Peiró.jpg" id="cv-img"><br>

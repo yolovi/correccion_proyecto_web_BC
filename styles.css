@@ -2,7 +2,21 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
+/* CORRECCION:
+	esto no se hace con todas las etiquetas, se utiliza el selector universal '*'
+	* {
+		margin: 0;
+		box-sizing; border-box;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		font-family: 'Blinker';
+	}	
+	Esto está copiado y pegado sin mirar lo que hace cada cosa. Si haces eso no vas a aprender nada.
+	Font-size lo cogemos del navegador del usuario usando rem
+*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,7 +31,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
-	box-sizing; border-box;
+	box-sizing; border-box; /* ese ; indica que has copiado y pegado sin mirarlo */
 	padding: 0;
 	border: 0;
 	font-size: 100%;
@@ -33,6 +47,9 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+/*CORRECCION:
+	Aquí tienes varios selectores que no utilizas, esto te ensucia el codigo.
+*/
 ol, ul {
 	list-style: none;
 }
@@ -51,6 +68,10 @@ table {
 /*End of MeyerWeb tools*/
 
 /*Top menu Navigación*/
+/* CORRECCION:
+	mala identación, esto a la hora de mantener y escalar el codigo te va a suponer un problema. Hay algunos trozos de código que cuesta mucho leer. El código debe ser fácilmente legible para cualquiera que se incorpore al proyecto.
+	position no funciona solo, debes darle una referencia para que lo aplique. En este caso te serviria top:0.
+*/
 .menu {display:flex;
     flex-direction: row; color: black;justify-content: space-between; background-color:#8c88bd; align-items:end;line-height:  60px;padding:30px, ;font-size:18px;}
 nav {position:sticky;grid-area: header;}
@@ -94,7 +115,9 @@ aside {margin: -580px 600px -800px 950px;display:flex; width: 194px;;flex-direct
     width:170px; height: 170px; border-radius:50%; border:solid 12px #817cb4; 
 }
 	/*Web responsive Biografía*/
-
+	/* CORRECCION:
+		Este nav es exactamente igual que el anterior y el siguiente, no hacemos una seccion de responsive por cada pagina, hacemos una sola seccion responsive y aplicamos lo que queremos de los selectores de todas las páginas
+	*/
 	@media only screen and (max-width: 600px) { /*teléfonos móviles*/
 		nav {grid-area: 1 / span 2;margin:1px;font-size: 12px;}
 		.container {
@@ -142,9 +165,13 @@ h4 {color:black}
 /*Pictures*/
 
 /* DUDA 2: Imagen con link incluido, no me deja escalar*/
-/*.linkedin-img 
-   width:100px; height:100px;
-}*/
+
+/****** CORRECCION:
+Si que te deja, pero tienes mal aplicada la clase o el id en los html. Se lo aplicas al contenedor, por lo que la imagen siempre coge su tamaño original. Si le das la clase a la imagen lo aplicará bien. Ten cuidado que como digo tienes la clase y un id con el mismo nombre. También falta la apertur de llaves {, y además tienes otra regla en algún sitio del documento que te está colocando la imagen encima del nav.
+*/
+/* .linkedin-img 
+   width:200px; height:200px;
+} */
 
 @media (max-width:600px) {body {
 	background-color:#8c88bd;}
